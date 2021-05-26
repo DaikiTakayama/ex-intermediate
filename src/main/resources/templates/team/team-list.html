@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>野球チーム一覧</h1>
+	
+	<p th:each=" team :${teamList}">
+		<a href="team-detail.html" th:href="@{'/exam01/showTeamDetail?id='+ ${team.id}}">
+			<span th:text="${team.teamName}" th:value="${team.id}"></span>
+		</a>
+	</p>
+</body>
+</html>
